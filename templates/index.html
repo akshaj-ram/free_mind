@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4">Welcome to FreeMinds</h1>
+                <p class="lead">Explore techniques to overcome peer pressure and empower your mind.</p>
+                <div class="mt-4">
+                    <a href="#paths" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="paths" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Choose Your Path</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3>Individual</h3>
+                        <p>For myself</p>
+                        <a href="{{ url_for('peer_pressure') }}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3>For my Friend</h3>
+                        <p>For someone I know</p>
+                        <a href="{{ url_for('peer_pressure') }}?type=friend" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3>Family Member</h3>
+                        <p>For my child/cousin</p>
+                        <a href="{{ url_for('peer_pressure') }}?type=family" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">What Others Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"FreeMinds has changed my life! The techniques here helped me gain confidence and reduce stress."</p>
+                    <footer>- Alex T.</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
